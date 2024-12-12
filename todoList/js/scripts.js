@@ -1,3 +1,4 @@
+//Começo doque devo fazer 
 // Clase
 
 class ToDo {
@@ -11,7 +12,7 @@ class ToDo {
 }
 
 // Array
-
+let arrayTodos = []
 
 //funções projeto
 
@@ -25,8 +26,8 @@ function CriarToDo(texto, prioridade, array){
 function AtualizarToDo(textoAntigo, textoNovo, array) {
   let atualizado = false
   array.forEach(todo => {
-    if(todo.texto == textoAntigo){
-      todo.texto = textoNovo
+    if(todo.Texto == textoAntigo){
+      todo.Texto = textoNovo
       atualizado = true
     }
   })
@@ -81,6 +82,8 @@ function OrdenarDecrescente(array) {
   array.sort((a, b) => b.Prioridade - a.Prioridade)
   return array
 }
+
+//Fim doque devo fazer
 
 // Seleção de elementos
 const todoForm = document.querySelector("#todo-form");
