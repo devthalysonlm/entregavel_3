@@ -1,5 +1,4 @@
 // Clase
-
 class ToDo {
   Texto
   Prioridade
