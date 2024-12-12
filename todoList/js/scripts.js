@@ -49,19 +49,37 @@ function ConcluirToDo(array, texto) {
   return concluido
 }
 
-function ExcluirToDo() {
-
+function ExcluirToDo(array, texto) {
+  let index
+  let removido = false
+  array.forEach(todo => {
+    if(todo.texto == texto){
+      index = array.indexOf(todo)
+      removido = true
+    }
+  })
+  array.splice(index, 1)
+  return removido
 }
 
-function PesquisarToDo() {
- 
+function PesquisarToDo(array, texto) {
+  let pesquisa =  false
+  array.forEach(todo => {
+    if(todo.texto.includes(texto)){
+      pesquisa = true
+    }
+  })
+  return pesquisa
 }
 
-function OrdenarCrescente() {
+function OrdenarCrescente(array) {
+  array.sort((a, b) => a.Prioridade - b.Prioridade)
+    return array
   
 }
-function OrdenarDecrescente() {
-  
+function OrdenarDecrescente(array) {
+  array.sort((a, b) => b.Prioridade - a.Prioridade)
+  return array
 }
 
 // Seleção de elementos
