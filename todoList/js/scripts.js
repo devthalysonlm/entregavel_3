@@ -1,4 +1,3 @@
-//Começo doque devo fazer 
 // Clase
 
 class ToDo {
@@ -37,7 +36,7 @@ function AtualizarToDo(textoAntigo, textoNovo, array) {
 function ConcluirToDo(array, texto) {
   let concluido = false
   array.forEach(todo =>  {
-    if(todo.texto == texto){
+    if(todo.Texto == texto){
       if(todo.feito){
         todo.feito = false
       } else {
@@ -54,7 +53,7 @@ function ExcluirToDo(array, texto) {
   let index
   let removido = false
   array.forEach(todo => {
-    if(todo.texto == texto){
+    if(todo.Texto == texto){
       index = array.indexOf(todo)
       removido = true
     }
@@ -66,7 +65,7 @@ function ExcluirToDo(array, texto) {
 function PesquisarToDo(array, texto) {
   let pesquisa =  false
   array.forEach(todo => {
-    if(todo.texto.includes(texto)){
+    if(todo.Texto.includes(texto)){
       pesquisa = true
     }
   })
@@ -83,7 +82,6 @@ function OrdenarDecrescente(array) {
   return array
 }
 
-//Fim doque devo fazer
 
 // Seleção de elementos
 const todoForm = document.querySelector("#todo-form");
