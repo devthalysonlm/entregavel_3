@@ -33,8 +33,20 @@ function AtualizarToDo(textoAntigo, textoNovo, array) {
   return atualizado
 }
 
-function ConcluirToDo() {
+function ConcluirToDo(array, texto) {
+  let concluido = false
+  array.forEach(todo =>  {
+    if(todo.texto == texto){
+      if(todo.feito){
+        todo.feito = false
+      } else {
+        todo.feito = true
+      }
+      concluido = true
 
+    }
+  })
+  return concluido
 }
 
 function ExcluirToDo() {
